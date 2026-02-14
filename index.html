@@ -1,200 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aaira Properties & Agro Limited</title>
+<meta charset="UTF-8">
+<title>Aaira Properties & Agro Limited</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: #f8fafc;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    nav {
-      background: #0f172a;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav h2 {
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
-    }
-
-    /* HERO */
-    .hero {
-      height: 85vh;
-      background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-      url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 46px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      opacity: 0.9;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      background: #16a34a;
-      padding: 12px 22px;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 70px 8%;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0f172a;
-    }
-
-    /* SERVICES */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #16a34a;
-    }
-
-    /* CONTACT */
-    .contact {
-      text-align: center;
-    }
-
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      margin-top: 50px;
-    }
-
-    @media(max-width: 768px){
-      .hero h1{
-        font-size: 32px;
-      }
-    }
-  </style>
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h2>Aaira Group</h2>
-    <div>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav class="nav">
+  <div class="logo">Aaira</div>
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="admin.html" class="admin-link">Admin</a>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Aaira Properties & Agro Limited</h1>
-      <p>Building Land • Growing Future • Sustainable Investments</p>
-      <a href="#contact" class="btn">Contact Us</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Invest in Land. Grow the Future.</h1>
+    <p>Premium property & agro investment solutions across Bangladesh.</p>
+    <div class="hero-btns">
+      <a href="projects.html" class="btn-primary">View Projects</a>
+      <a href="contact.html" class="btn-secondary">Get Consultation</a>
     </div>
   </div>
+</section>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Aaira Properties & Agro Limited is committed to real estate development,
-      land management, and agro-based investment projects. We deliver reliable,
-      sustainable, and long-term value for our clients and partners across Bangladesh.
-    </p>
-  </section>
+<!-- FEATURES -->
+<section class="features">
+  <div class="box">🏢 Trusted Properties</div>
+  <div class="box">🌱 Sustainable Agro</div>
+  <div class="box">📈 Smart Investments</div>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Our Services</h2>
+<!-- LIVE PROJECTS -->
+<section class="live-projects">
+  <h2>Featured Projects</h2>
+  <div id="projectsGrid" class="grid"></div>
+</section>
 
-    <div class="grid">
-      <div class="card">
-        <h3>🏢 Property Development</h3>
-        <p>Residential and commercial land and property projects with strong investment value.</p>
-      </div>
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Your Investment Journey Today</h2>
+  <a href="contact.html" class="btn-primary">Contact Us</a>
+</section>
 
-      <div class="card">
-        <h3>🌱 Agro Farming</h3>
-        <p>Modern agriculture, farming solutions, and sustainable agro initiatives.</p>
-      </div>
+<!-- FLOAT BUTTONS -->
+<a href="tel:+8801345695763" class="float call">📞</a>
+<a href="https://wa.me/8801345695763" class="float whatsapp">💬</a>
 
-      <div class="card">
-        <h3>📈 Investment Consultancy</h3>
-        <p>Professional guidance for real estate and agro investments and project planning.</p>
-      </div>
+<!-- FIREBASE -->
+<script type="module" src="js/firebase.js"></script>
+<script type="module">
+import { db } from "./js/firebase.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+const grid = document.getElementById("projectsGrid");
+
+const querySnap = await getDocs(collection(db, "projects"));
+querySnap.forEach(doc => {
+  const p = doc.data();
+  grid.innerHTML += `
+    <div class="card">
+      <img src="${p.image}">
+      <h3>${p.title}</h3>
+      <p>${p.location}</p>
+      <strong>${p.price}</strong>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@yourdomain.com</p>
-    <p>Phone: +880-XXXXXXXXXX</p>
-    <br>
-    <a href="mailto:info@yourdomain.com" class="btn">Send Email</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Aaira Properties & Agro Limited. All Rights Reserved.
-  </footer>
+  `;
+});
+</script>
 
 </body>
 </html>
