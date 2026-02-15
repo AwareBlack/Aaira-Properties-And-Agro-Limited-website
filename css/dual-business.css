@@ -1,0 +1,841 @@
+/* =======================================================
+   DUAL BUSINESS STYLES - AAIRA PROPERTIES & AGRO LIMITED
+   Equal Prominence for Real Estate AND Dairy/Agro
+   ======================================================= */
+
+/* Dual Business Hero */
+.hero-dual {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #1c1917 0%, #2d5016 50%, #1c1917 100%);
+}
+
+.hero-container-dual {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.hero-content-center {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge-dual {
+    display: inline-block;
+    padding: 10px 24px;
+    background: rgba(212, 165, 116, 0.15);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-title-dual {
+    font-family: var(--font-display);
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero-subtitle-dual {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--light-gray);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Business Cards - Equal Prominence */
+.business-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.business-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.business-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    transition: var(--transition-base);
+}
+
+.card-real-estate::before {
+    background: linear-gradient(90deg, #2d5016, #3d6b20);
+}
+
+.card-agro::before {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.business-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.business-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: var(--transition-base);
+}
+
+.card-real-estate .business-icon {
+    background: linear-gradient(135deg, #2d5016, #3d6b20);
+    color: var(--white);
+}
+
+.card-agro .business-icon {
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+    color: var(--white);
+}
+
+.business-card:hover .business-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.business-card h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.business-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    margin-bottom: 24px;
+}
+
+.card-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.card-features span {
+    padding: 6px 16px;
+    background: rgba(45, 80, 22, 0.08);
+    color: var(--primary);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card-agro .card-features span {
+    background: rgba(22, 163, 74, 0.08);
+    color: #16a34a;
+}
+
+.btn-card {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+    transition: var(--transition-base);
+}
+
+.card-agro .btn-card {
+    background: #16a34a;
+}
+
+.btn-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-card-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition-base);
+}
+
+.card-agro .btn-card-secondary {
+    border-color: #16a34a;
+    color: #16a34a;
+}
+
+.btn-card-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.card-agro .btn-card-secondary:hover {
+    background: #16a34a;
+}
+
+/* Section Headers with Business Labels */
+.section-header-business {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.business-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.real-estate-label {
+    background: rgba(45, 80, 22, 0.1);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.dairy-label {
+    background: rgba(22, 163, 74, 0.1);
+    color: #16a34a;
+    border: 2px solid #16a34a;
+}
+
+.qurbani-label {
+    background: rgba(212, 165, 116, 0.1);
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+/* Real Estate Section */
+.real-estate-section {
+    padding: 100px 0;
+    background: var(--off-white);
+}
+
+.services-grid-dual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.service-card-dual {
+    background: var(--white);
+    padding: 40px 32px;
+    border-radius: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-base);
+}
+
+.service-card-dual:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 40px rgba(45, 80, 22, 0.15);
+}
+
+.service-icon-dual {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.service-card-dual h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.service-card-dual p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    margin-bottom: 16px;
+}
+
+.price-tag {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feature-list li {
+    font-size: 14px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* Dairy Products Section */
+.dairy-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-base);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #16a34a;
+    box-shadow: 0 12px 40px rgba(22, 163, 74, 0.15);
+}
+
+.product-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 16px;
+    background: #16a34a;
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.product-content {
+    padding: 24px;
+}
+
+.product-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.product-content p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--dark-gray);
+    margin-bottom: 16px;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(22, 163, 74, 0.05);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.product-quantity {
+    font-size: 13px;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #16a34a;
+}
+
+.product-features-small {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.product-features-small span {
+    font-size: 11px;
+    padding: 4px 10px;
+    background: rgba(22, 163, 74, 0.08);
+    color: #16a34a;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.btn-product {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    background: #16a34a;
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: var(--transition-base);
+}
+
+.btn-product:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Qurbani Section */
+.qurbani-section {
+    padding: 100px 0;
+    background: var(--off-white);
+}
+
+.qurbani-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.qurbani-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.qurbani-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+.qurbani-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.qurbani-content {
+    padding: 40px;
+}
+
+.qurbani-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 24px;
+}
+
+.qurbani-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spec-item strong {
+    font-size: 14px;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.spec-item span {
+    font-size: 16px;
+    color: var(--charcoal);
+    font-weight: 700;
+}
+
+.qurbani-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qurbani-features li {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.qurbani-info-box {
+    background: linear-gradient(135deg, var(--secondary-light), var(--secondary));
+    padding: 40px;
+    border-radius: 16px;
+    color: var(--charcoal);
+}
+
+.qurbani-info-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.info-item {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+}
+
+.info-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--dark-gray);
+}
+
+.urgent-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid #dc2626;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.urgent-notice svg {
+    color: #dc2626;
+    flex-shrink: 0;
+}
+
+.urgent-notice span {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--charcoal);
+}
+
+.qurbani-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-large {
+    padding: 18px 32px;
+    font-size: 17px;
+}
+
+/* Why Us Dual */
+.why-us-dual {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 40px 24px;
+    background: var(--light-gray);
+    border-radius: 16px;
+    transition: var(--transition-base);
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    background: var(--white);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.why-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+}
+
+.why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--dark-gray);
+}
+
+/* Contact Dual */
+.contact-dual {
+    padding: 100px 0;
+    background: var(--off-white);
+}
+
+.contact-grid-dual {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+}
+
+.contact-methods-dual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-card-dual {
+    padding: 32px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transition-base);
+}
+
+.contact-card-dual:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.contact-icon-dual {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.whatsapp-icon {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: var(--white);
+}
+
+.phone-icon {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: var(--white);
+}
+
+.email-icon {
+    background: linear-gradient(135deg, var(--secondary), var(--accent));
+    color: var(--white);
+}
+
+.contact-card-dual h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.contact-card-dual p {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 16px;
+}
+
+.contact-link-dual {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    transition: var(--transition-base);
+}
+
+.contact-link-dual:hover {
+    color: var(--primary-light);
+    transform: translateX(4px);
+}
+
+.timing {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 8px;
+}
+
+.contact-form-dual {
+    background: var(--white);
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form-dual h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 32px;
+}
+
+.section-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .business-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid-dual {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .qurbani-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-grid-dual {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title-dual {
+        font-size: 42px;
+    }
+    
+    .business-card {
+        padding: 32px;
+    }
+    
+    .business-card h2 {
+        font-size: 26px;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-cta {
+        flex-direction: column;
+    }
+    
+    .section-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-dual {
+        font-size: 32px;
+    }
+    
+    .business-card {
+        padding: 24px;
+    }
+    
+    .contact-form-dual {
+        padding: 32px 24px;
+    }
+}
