@@ -1,0 +1,482 @@
+/* ============================================
+   PREMIUM TYPOGRAPHY & SPACING
+   Aaira Properties & Agro Limited
+   
+   Add this file AFTER style.css
+   <link rel="stylesheet" href="css/premium-typography.css">
+   ============================================ */
+
+/* ============================================
+   TYPOGRAPHY SCALE & HIERARCHY
+   ============================================ */
+
+:root {
+    /* Typography Scale */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+    --font-size-6xl: 3.75rem;     /* 60px */
+    --font-size-7xl: 4.5rem;      /* 72px */
+    
+    /* Line Heights */
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    --line-height-loose: 2;
+    
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Spacing Scale (8px base) */
+    --space-1: 0.5rem;   /* 8px */
+    --space-2: 1rem;     /* 16px */
+    --space-3: 1.5rem;   /* 24px */
+    --space-4: 2rem;     /* 32px */
+    --space-5: 2.5rem;   /* 40px */
+    --space-6: 3rem;     /* 48px */
+    --space-8: 4rem;     /* 64px */
+    --space-10: 5rem;    /* 80px */
+    --space-12: 6rem;    /* 96px */
+    --space-16: 8rem;    /* 128px */
+    --space-20: 10rem;   /* 160px */
+}
+
+/* ============================================
+   ENHANCED HERO TYPOGRAPHY
+   ============================================ */
+
+.hero-title-dual {
+    font-size: var(--font-size-7xl) !important;
+    line-height: var(--line-height-tight) !important;
+    letter-spacing: var(--letter-spacing-tight) !important;
+    font-weight: var(--font-weight-extrabold) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.hero-subtitle-dual {
+    font-size: var(--font-size-xl) !important;
+    line-height: var(--line-height-relaxed) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-normal) !important;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto var(--space-6);
+}
+
+.hero-badge-dual {
+    font-size: var(--font-size-sm) !important;
+    letter-spacing: var(--letter-spacing-wide) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    margin-bottom: var(--space-4) !important;
+    padding: var(--space-1) var(--space-3) !important;
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+
+.section-header h2,
+.real-estate-section h2,
+.dairy-section h2,
+.qurbani-section h2 {
+    font-size: var(--font-size-5xl) !important;
+    line-height: var(--line-height-tight) !important;
+    letter-spacing: var(--letter-spacing-tight) !important;
+    font-weight: var(--font-weight-bold) !important;
+    margin-bottom: var(--space-4) !important;
+}
+
+.section-header p,
+.section-subtitle {
+    font-size: var(--font-size-lg) !important;
+    line-height: var(--line-height-relaxed) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-normal) !important;
+    opacity: 0.8;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   CARD TYPOGRAPHY
+   ============================================ */
+
+.business-card h2,
+.service-card-dual h3,
+.product-card h3 {
+    font-size: var(--font-size-2xl) !important;
+    line-height: var(--line-height-tight) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-bold) !important;
+    margin-bottom: var(--space-2) !important;
+}
+
+.business-card p,
+.service-card-dual p,
+.product-card p {
+    font-size: var(--font-size-base) !important;
+    line-height: var(--line-height-relaxed) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-normal) !important;
+    color: rgba(28, 25, 23, 0.75);
+}
+
+/* ============================================
+   BUTTON TYPOGRAPHY
+   ============================================ */
+
+.btn,
+.btn-card,
+.btn-product,
+.btn-primary,
+button[type="submit"] {
+    font-size: var(--font-size-base) !important;
+    line-height: 1 !important;
+    letter-spacing: var(--letter-spacing-wide) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    padding: var(--space-3) var(--space-5) !important;
+}
+
+.btn-lg {
+    font-size: var(--font-size-lg) !important;
+    padding: var(--space-4) var(--space-6) !important;
+}
+
+.btn-sm {
+    font-size: var(--font-size-sm) !important;
+    padding: var(--space-2) var(--space-4) !important;
+}
+
+/* ============================================
+   LABEL & BADGE TYPOGRAPHY
+   ============================================ */
+
+.business-label,
+.product-badge,
+.real-estate-label,
+.dairy-label {
+    font-size: var(--font-size-xs) !important;
+    line-height: 1 !important;
+    letter-spacing: var(--letter-spacing-wider) !important;
+    font-weight: var(--font-weight-bold) !important;
+    text-transform: uppercase;
+    padding: var(--space-1) var(--space-2) !important;
+}
+
+/* ============================================
+   FORM TYPOGRAPHY
+   ============================================ */
+
+input,
+textarea,
+select {
+    font-size: var(--font-size-base) !important;
+    line-height: var(--line-height-normal) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-normal) !important;
+}
+
+label {
+    font-size: var(--font-size-sm) !important;
+    line-height: var(--line-height-normal) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    margin-bottom: var(--space-1) !important;
+}
+
+::placeholder {
+    font-size: var(--font-size-base) !important;
+    letter-spacing: var(--letter-spacing-normal) !important;
+    font-weight: var(--font-weight-normal) !important;
+    opacity: 0.5;
+}
+
+/* ============================================
+   PREMIUM SPACING SYSTEM
+   ============================================ */
+
+/* Section Spacing */
+section {
+    padding: var(--space-20) 0 !important;
+}
+
+.hero-dual {
+    padding: var(--space-20) 0 var(--space-16) !important;
+    min-height: 90vh;
+}
+
+/* Container Spacing */
+.container {
+    padding-left: var(--space-4) !important;
+    padding-right: var(--space-4) !important;
+}
+
+/* Card Spacing */
+.business-cards {
+    gap: var(--space-6) !important;
+    margin-top: var(--space-8) !important;
+}
+
+.business-card,
+.service-card-dual,
+.product-card {
+    padding: var(--space-6) !important;
+}
+
+/* Grid Spacing */
+.products-grid,
+.services-grid-dual,
+.qurbani-grid {
+    gap: var(--space-5) !important;
+    margin-top: var(--space-8) !important;
+}
+
+/* Content Spacing */
+.business-card > * + *,
+.service-card-dual > * + *,
+.product-card > * + * {
+    margin-top: var(--space-3) !important;
+}
+
+/* ============================================
+   FOOTER SPACING
+   ============================================ */
+
+.footer {
+    padding: var(--space-12) 0 var(--space-6) !important;
+}
+
+.footer-grid {
+    gap: var(--space-8) !important;
+}
+
+.footer-bottom {
+    margin-top: var(--space-8) !important;
+    padding-top: var(--space-6) !important;
+}
+
+/* ============================================
+   CONTACT SECTION SPACING
+   ============================================ */
+
+.contact-grid {
+    gap: var(--space-8) !important;
+    margin-top: var(--space-8) !important;
+}
+
+.contact-method {
+    padding: var(--space-5) !important;
+}
+
+.contact-form-wrapper {
+    padding: var(--space-6) !important;
+}
+
+.form-group {
+    margin-bottom: var(--space-4) !important;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .hero-title-dual {
+        font-size: var(--font-size-6xl) !important;
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-4xl) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --space-20: 5rem;  /* 80px */
+        --space-16: 4rem;  /* 64px */
+        --space-12: 3rem;  /* 48px */
+    }
+    
+    .hero-title-dual {
+        font-size: var(--font-size-5xl) !important;
+    }
+    
+    .hero-subtitle-dual {
+        font-size: var(--font-size-lg) !important;
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-3xl) !important;
+    }
+    
+    .section-header p {
+        font-size: var(--font-size-base) !important;
+    }
+    
+    .business-card h2,
+    .service-card-dual h3 {
+        font-size: var(--font-size-xl) !important;
+    }
+    
+    section {
+        padding: var(--space-12) 0 !important;
+    }
+    
+    .hero-dual {
+        padding: var(--space-16) 0 var(--space-12) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-dual {
+        font-size: var(--font-size-4xl) !important;
+    }
+    
+    .hero-subtitle-dual {
+        font-size: var(--font-size-base) !important;
+    }
+    
+    .section-header h2 {
+        font-size: var(--font-size-2xl) !important;
+    }
+    
+    .business-card,
+    .service-card-dual,
+    .product-card {
+        padding: var(--space-4) !important;
+    }
+    
+    .btn,
+    .btn-card {
+        padding: var(--space-2) var(--space-4) !important;
+        font-size: var(--font-size-sm) !important;
+    }
+}
+
+/* ============================================
+   TEXT UTILITIES
+   ============================================ */
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-pretty {
+    text-wrap: pretty;
+}
+
+/* Prevent orphans */
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* Optimal reading width */
+p {
+    max-width: 75ch;
+}
+
+/* ============================================
+   PREMIUM TEXT EFFECTS
+   ============================================ */
+
+/* Gradient text for hero */
+.hero-title-dual {
+    background: linear-gradient(135deg, #1c1917 0%, #2d5016 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Premium drop shadow for headings */
+.section-header h2 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+/* Subtle text highlight */
+.highlight {
+    background: linear-gradient(180deg, transparent 60%, rgba(212, 165, 116, 0.3) 60%);
+    padding: 0 0.25em;
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* Improve focus visibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 3px solid rgba(45, 80, 22, 0.5);
+    outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+}
+
+.skip-to-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    a,
+    button,
+    input[type="checkbox"],
+    input[type="radio"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ============================================
+   PRINT OPTIMIZATION
+   ============================================ */
+
+@media print {
+    * {
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
+    
+    h1 { font-size: 24pt !important; }
+    h2 { font-size: 20pt !important; }
+    h3 { font-size: 16pt !important; }
+    h4 { font-size: 14pt !important; }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+}

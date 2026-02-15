@@ -1,0 +1,488 @@
+/* ============================================
+   PREMIUM ANIMATIONS & ENHANCEMENTS
+   Aaira Properties & Agro Limited
+   
+   Add this file AFTER your existing CSS files
+   <link rel="stylesheet" href="css/premium-animations.css">
+   ============================================ */
+
+/* ============================================
+   GLOBAL ENHANCEMENTS
+   ============================================ */
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ============================================
+   FADE-IN-UP ANIMATION (AOS-LIKE)
+   ============================================ */
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate].animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for sequential animations */
+[data-animate]:nth-child(1) { transition-delay: 0s; }
+[data-animate]:nth-child(2) { transition-delay: 0.1s; }
+[data-animate]:nth-child(3) { transition-delay: 0.2s; }
+[data-animate]:nth-child(4) { transition-delay: 0.3s; }
+[data-animate]:nth-child(5) { transition-delay: 0.4s; }
+[data-animate]:nth-child(6) { transition-delay: 0.5s; }
+
+/* ============================================
+   PREMIUM HOVER EFFECTS
+   ============================================ */
+
+/* Card Lift Effect */
+.business-card,
+.service-card-dual,
+.product-card,
+.project-card,
+.qurbani-cow-card,
+.admin-item-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.business-card:hover,
+.service-card-dual:hover,
+.product-card:hover,
+.project-card:hover,
+.qurbani-cow-card:hover,
+.admin-item-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.16),
+                0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Premium Glow Effect on Hover */
+.business-card:hover {
+    box-shadow: 0 24px 60px rgba(45, 80, 22, 0.2),
+                0 8px 16px rgba(45, 80, 22, 0.1),
+                inset 0 0 0 1px rgba(45, 80, 22, 0.1);
+}
+
+.card-agro:hover {
+    box-shadow: 0 24px 60px rgba(22, 163, 74, 0.2),
+                0 8px 16px rgba(22, 163, 74, 0.1),
+                inset 0 0 0 1px rgba(22, 163, 74, 0.1);
+}
+
+/* ============================================
+   BUTTON ENHANCEMENTS
+   ============================================ */
+
+/* Premium button transitions */
+.btn,
+.btn-card,
+.btn-product,
+.btn-primary,
+.btn-outline,
+button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Ripple effect on click */
+.btn::before,
+.btn-card::before,
+.btn-product::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before,
+.btn-card:active::before,
+.btn-product:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Enhanced hover states */
+.btn:hover,
+.btn-card:hover,
+.btn-product:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 12px 32px rgba(45, 80, 22, 0.4);
+}
+
+.btn:active,
+.btn-card:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* ============================================
+   NAVIGATION ENHANCEMENTS
+   ============================================ */
+
+/* Smooth navigation appearance */
+.navbar {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Nav link hover effect */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ============================================
+   IMAGE HOVER EFFECTS
+   ============================================ */
+
+/* Zoom on hover */
+.product-image img,
+.project-image img,
+.qurbani-image img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover .product-image img,
+.project-card:hover .project-image img,
+.qurbani-card:hover .qurbani-image img {
+    transform: scale(1.08);
+}
+
+/* ============================================
+   ICON ANIMATIONS
+   ============================================ */
+
+/* Business icon pulse */
+.business-icon,
+.service-icon-dual {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.business-card:hover .business-icon,
+.service-card-dual:hover .service-icon-dual {
+    transform: scale(1.12) rotate(5deg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   FORM ENHANCEMENTS
+   ============================================ */
+
+/* Input focus effects */
+input:focus,
+textarea:focus,
+select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(45, 80, 22, 0.12),
+                0 0 0 4px rgba(45, 80, 22, 0.08);
+}
+
+/* Label float animation */
+.form-group {
+    position: relative;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    transform: translateY(-24px) scale(0.85);
+    color: var(--primary);
+}
+
+/* ============================================
+   SECTION REVEAL ANIMATIONS
+   ============================================ */
+
+/* Hero entrance animation */
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content-center {
+    animation: heroFadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.business-cards {
+    animation: heroFadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+/* ============================================
+   BADGE & TAG ANIMATIONS
+   ============================================ */
+
+.hero-badge-dual,
+.product-badge,
+.business-label {
+    animation: badgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+/* Skeleton loading animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 0px,
+        #e8e8e8 40px,
+        #f0f0f0 80px
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR
+   ============================================ */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* ============================================
+   FLOATING ACTION BUTTON ENHANCEMENTS
+   ============================================ */
+
+.fab {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab:hover {
+    transform: translateY(-8px) scale(1.15);
+}
+
+.fab:active {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Enhanced pulse animation */
+@keyframes premiumPulse {
+    0%, 100% {
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3),
+                    0 0 0 12px rgba(37, 211, 102, 0.15),
+                    0 0 0 24px rgba(37, 211, 102, 0.08);
+    }
+}
+
+.fab-whatsapp {
+    animation: premiumPulse 2.5s ease-in-out infinite;
+}
+
+/* ============================================
+   MODAL & OVERLAY ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   COUNTER ANIMATION (for stats)
+   ============================================ */
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-number {
+    animation: countUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* GPU acceleration for smooth animations */
+.business-card,
+.service-card-dual,
+.product-card,
+.btn,
+.nav-link,
+.fab {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    [data-animate] {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ============================================
+   RESPONSIVE ANIMATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    .business-card:hover,
+    .service-card-dual:hover,
+    .product-card:hover {
+        transform: translateY(-6px);
+    }
+    
+    .btn:hover,
+    .btn-card:hover {
+        transform: translateY(-2px) scale(1.01);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Minimal animations on small screens */
+    [data-animate]:nth-child(n) {
+        transition-delay: 0s;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (FUTURE)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .skeleton {
+        background: linear-gradient(
+            90deg,
+            #2a2a2a 0px,
+            #333333 40px,
+            #2a2a2a 80px
+        );
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    [data-animate],
+    .business-card,
+    .service-card-dual,
+    .product-card,
+    .btn,
+    .fab {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
