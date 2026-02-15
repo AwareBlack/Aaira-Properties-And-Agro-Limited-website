@@ -1,0 +1,311 @@
+/* ============================================
+   ENHANCED STYLES FOR AAIRA PROPERTIES
+   WhatsApp Integration + Landing Page Optimizations
+   ============================================ */
+
+/* WhatsApp Button Enhancements */
+.btn-whatsapp {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E !important;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4) !important;
+}
+
+.btn-whatsapp svg {
+    fill: currentColor;
+}
+
+/* Enhanced Floating WhatsApp Button */
+.fab-whatsapp.whatsapp-primary {
+    right: 24px;
+    bottom: 100px;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    animation: whatsappPulse 2s infinite;
+}
+
+.fab-whatsapp.whatsapp-primary:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 15px 50px rgba(37, 211, 102, 0.5);
+}
+
+.fab-whatsapp.whatsapp-primary:hover .fab-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* FAB Tooltips */
+.fab-tooltip {
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.fab-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid var(--charcoal);
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.fab-call:hover .fab-tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* WhatsApp Pulse Animation */
+@keyframes whatsappPulse {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4),
+                    0 0 0 15px rgba(37, 211, 102, 0.2),
+                    0 0 0 30px rgba(37, 211, 102, 0.1);
+    }
+}
+
+/* Project Feature Tags */
+.project-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.feature-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(45, 80, 22, 0.08);
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Service Card CTAs */
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 16px;
+    transition: var(--transition-base);
+}
+
+.service-card.featured .service-cta {
+    color: var(--white);
+}
+
+.service-cta:hover {
+    gap: 12px;
+    color: var(--primary-light);
+}
+
+.service-card.featured .service-cta:hover {
+    color: var(--secondary);
+}
+
+/* CTA Card in Why Us Section */
+.cta-card {
+    padding: 32px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 16px;
+    text-align: center;
+    color: var(--white);
+    margin-top: 24px;
+}
+
+.cta-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--white);
+}
+
+.cta-card p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 24px;
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Form Enhancements */
+.form-subtitle {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 24px;
+}
+
+.contact-form-wrapper h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 13px;
+    color: var(--dark-gray);
+    margin-top: 16px;
+}
+
+.form-note a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Contact Method Enhancements */
+.contact-method h4 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--charcoal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.contact-method p {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 4px;
+}
+
+.contact-method a[href^="https://wa.me"] {
+    color: #25D366;
+    font-weight: 700;
+}
+
+.contact-method:hover a[href^="https://wa.me"] {
+    color: var(--white);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 992px) {
+    .fab-whatsapp.whatsapp-primary {
+        width: 64px;
+        height: 64px;
+        bottom: 90px;
+    }
+    
+    .fab-call {
+        bottom: 20px;
+        right: 24px;
+    }
+    
+    .fab-tooltip {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-whatsapp span {
+        font-size: 14px;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .fab-whatsapp.whatsapp-primary {
+        width: 56px;
+        height: 56px;
+        right: 20px;
+        bottom: 80px;
+    }
+    
+    .fab-call {
+        width: 56px;
+        height: 56px;
+        right: 20px;
+        bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-whatsapp span {
+        font-size: 13px;
+    }
+    
+    .cta-card {
+        padding: 24px;
+    }
+    
+    .cta-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .fab,
+    .nav-toggle,
+    .scroll-indicator,
+    .contact-form-wrapper {
+        display: none !important;
+    }
+    
+    .hero {
+        page-break-after: always;
+    }
+}
+
+/* Admin Link */
+.admin-link {
+    color: #78716c !important;
+    font-size: 12px !important;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.admin-link:hover {
+    opacity: 1;
+}
+
+.admin-link::before {
+    content: '🔒';
+    margin-right: 4px;
+    font-size: 10px;
+    opacity: 0.6;
+}
