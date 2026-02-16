@@ -1,0 +1,25 @@
+# robots.txt for Aaira Properties & Agro Limited
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /admin-login.html
+Disallow: /js/admin.js
+Disallow: /js/firebase.js
+Disallow: /*.json$
+
+# Crawl-delay for good behavior
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://aairaproperties.com/sitemap.xml
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
