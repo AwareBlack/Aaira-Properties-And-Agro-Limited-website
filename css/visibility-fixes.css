@@ -1,0 +1,289 @@
+/* ============================================
+   VISIBILITY & CONTRAST FIXES
+   Aaira Properties & Agro Limited
+   
+   Add this file AFTER all other CSS files:
+   <link rel="stylesheet" href="css/visibility-fixes.css">
+   ============================================ */
+
+/* ============================================
+   NAVIGATION ENHANCEMENTS - CRITICAL FIX
+   ============================================ */
+
+/* Enhanced navbar with stronger contrast */
+.navbar {
+    background: rgba(28, 25, 23, 0.98) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.navbar.scrolled {
+    background: rgb(28, 25, 23) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Navigation links - Maximum visibility */
+.nav-link {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced underline effect */
+.nav-link::after {
+    background: #3d6b20 !important;
+    height: 3px !important;
+}
+
+/* Brand name contrast */
+.brand-name {
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation phone button - enhanced */
+.nav-phone {
+    background: #2d5016 !important;
+    box-shadow: 0 2px 8px rgba(45, 80, 22, 0.3);
+}
+
+.nav-phone:hover {
+    background: #3d6b20 !important;
+    box-shadow: 0 4px 16px rgba(45, 80, 22, 0.4);
+}
+
+/* ============================================
+   HERO SECTION - CRITICAL VISIBILITY FIX
+   ============================================ */
+
+/* Stronger gradient overlay for maximum text readability */
+.hero-overlay {
+    background: linear-gradient(135deg, 
+        rgba(28, 25, 23, 0.95) 0%,
+        rgba(45, 80, 22, 0.90) 50%,
+        rgba(28, 25, 23, 0.93) 100%) !important;
+}
+
+/* Additional protective overlay */
+.hero-dual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-container-dual {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero title - Maximum contrast with layered shadows */
+.hero-title-dual {
+    color: #ffffff !important;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 8px 16px rgba(0, 0, 0, 0.15) !important;
+    font-weight: 900 !important;
+}
+
+/* Hero subtitle - Enhanced readability */
+.hero-subtitle-dual {
+    color: rgba(255, 255, 255, 0.95) !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+    font-weight: 500 !important;
+}
+
+/* Hero badge - Stronger contrast */
+.hero-badge-dual {
+    background: rgba(212, 165, 116, 0.25) !important;
+    border: 2px solid #d4a574 !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    font-weight: 700 !important;
+    backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   BUSINESS CARDS - ENHANCED CONTRAST
+   ============================================ */
+
+.business-card {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.business-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Card headings - Maximum contrast */
+.business-card h2 {
+    color: #1c1917 !important;
+    font-weight: 800 !important;
+}
+
+.business-card p {
+    color: #292524 !important;
+}
+
+/* ============================================
+   SECTION BACKGROUNDS - ENHANCED
+   ============================================ */
+
+/* Ensure all sections have proper contrast */
+section {
+    position: relative;
+}
+
+/* Dark sections - ensure text readability */
+.footer {
+    background: #1c1917 !important;
+}
+
+.footer * {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer h4 {
+    color: #ffffff !important;
+}
+
+/* ============================================
+   MOBILE NAVIGATION FIX
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Mobile menu background */
+    .nav-menu {
+        background: rgba(28, 25, 23, 0.98) !important;
+        backdrop-filter: blur(20px) !important;
+    }
+    
+    /* Mobile menu items - maximum visibility */
+    .nav-link {
+        color: #ffffff !important;
+        padding: 16px 24px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link:hover {
+        background: rgba(61, 107, 32, 0.2);
+    }
+    
+    /* Hamburger menu - white bars */
+    .nav-toggle span {
+        background: #ffffff !important;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+/* Enhanced focus states for keyboard navigation */
+.nav-link:focus,
+button:focus,
+a:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 3px;
+}
+
+/* ============================================
+   CONTRAST BOOST FOR ALL TEXT ON DARK BG
+   ============================================ */
+
+/* Any text on dark/semi-transparent backgrounds */
+.hero-dual h1,
+.hero-dual h2,
+.hero-dual h3,
+.hero-dual p,
+.hero-dual span {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   GLASSMORPHISM ENHANCEMENTS
+   ============================================ */
+
+/* Subtle glassmorphism for premium feel */
+.navbar,
+.business-card {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* ============================================
+   PRINT STYLES - ENSURE READABILITY
+   ============================================ */
+
+@media print {
+    .hero-title-dual,
+    .hero-subtitle-dual,
+    .nav-link,
+    .brand-name {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+    
+    .navbar,
+    .hero-overlay {
+        background: #ffffff !important;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE SUPPORT
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    .nav-link {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+    }
+    
+    .hero-title-dual {
+        text-shadow: 
+            0 3px 6px rgba(0, 0, 0, 0.6),
+            0 6px 12px rgba(0, 0, 0, 0.4) !important;
+    }
+    
+    .navbar {
+        background: rgb(28, 25, 23) !important;
+    }
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATION
+   ============================================ */
+
+/* GPU acceleration for smooth rendering */
+.navbar,
+.hero-overlay,
+.business-card {
+    transform: translateZ(0);
+    will-change: auto;
+}
+
+/* ============================================
+   FINAL POLISH
+   ============================================ */
+
+/* Ensure crisp text rendering */
+.hero-title-dual,
+.hero-subtitle-dual,
+.nav-link,
+.brand-name {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
